@@ -42,8 +42,11 @@
     <script type="text/javascript" src="lib/bootstrap.min.js"></script>
     <script type="text/javascript" src="lib/angular/angular.min.js"></script>
 
+    <script type="text/javascript" src="lib/angular/angular-route.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <script type="text/javascript" src="cordova.js"></script>
+
 
     <script type="text/javascript" src="js/app/app.js"></script>
     <script type="text/javascript" src="js/app/controllers/appCtrl.js"></script>
@@ -72,11 +75,13 @@
           {{ciao}}
         </div>
       </div>
+
       <div class="row">
         <div class="form-group">
           <button type="button" class="btn btn-primary" ng-click="welcome()">Welcome</button>
         </div>
       </div>
+
       <div class="row">
         <div class="form-group">
           <button type="button" class="btn btn-primary" ng-click="getFoto()">Foto</button>
@@ -88,8 +93,17 @@
           </div>
         </div>
       </div>
-    </div>
 
+      <div class="row">
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" ng-click="richiesta()">Richiesta</button>
+
+          <pre>
+            {{comuni | json}}
+          </pre>
+
+        </div>
+      </div>
 </body>
 
 </html>

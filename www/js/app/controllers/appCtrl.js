@@ -1,4 +1,4 @@
-angular.module('myApp').controller('appCtrl',['$scope', function ($scope) {
+angular.module('myApp').controller('appCtrl',['$scope', '$location', '$http', function ($scope, $location, $http) {
   $scope.immagine = {
     src: null,
     isError: null
@@ -36,4 +36,15 @@ angular.module('myApp').controller('appCtrl',['$scope', function ($scope) {
       correctOrientation:true
     });
   };
+
+
+  $scope.comuni = null;
+
+  $scope.richiesta = function() {
+    $http.get("http://tuttunizzatore.sorint.it/json/comuni?q=berg").then(function successCallback(response) {
+  	  $scope.comuni = response.data;
+    }, function errorCallback(response) {
+  	  $scope.comuni = null;
+    });
+  }
 }]);
