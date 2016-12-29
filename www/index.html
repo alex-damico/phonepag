@@ -46,7 +46,7 @@
     <script type="text/javascript" src="cordova.js"></script>
 
     <script type="text/javascript" src="js/app/app.js"></script>
-    <script type="text/javascript" src="js/app/controllers/login.js"></script>
+    <script type="text/javascript" src="js/app/controllers/appCtrl.js"></script>
 
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
@@ -57,26 +57,34 @@
 </head>
 
 <body>
-    <div class="app">
+    <!--<div class="app">
         <h1>Hi PhoneGap</h1>
         <div id="deviceready" class="blink">
             <p class="event listening">Connecting to Device</p>
             <p class="event received">Device is Ready</p>
         </div>
-    </div>
+    </div>-->
 
-    <div ng-controller="login" class="container-fluid">
+    <div ng-controller="appCtrl" class="container" style="padding-top: 20px;">
       <div class="row">
-        <div class="col-sm-12">
+        <div class="form-group">
           <button type="button" class="btn btn-primary" ng-click="eccomi()">Ciao</button>
-          <h1>{{ciao}}</h1>
+          {{ciao}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
           <button type="button" class="btn btn-primary" ng-click="welcome()">Welcome</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
           <button type="button" class="btn btn-primary" ng-click="getFoto()">Foto</button>
           <div ng-show="immagine.src !== null">
                 <img ng-src="{{immagine.src}}" height="150" width="150"/>
           </div>
           <div>
-            <h1>{{immagine.isError}}</h1>
+            <p>Errore: {{immagine.isError}}</p>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-angular.module('myApp').controller('login',['$scope', function ($scope) {
+angular.module('myApp').controller('appCtrl',['$scope', function ($scope) {
   $scope.immagine = {
     src: null,
     isError: null
