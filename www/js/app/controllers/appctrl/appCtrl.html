@@ -1,0 +1,43 @@
+<div class="container" style="padding-top: 20px;">
+  <div class="row">
+    <div class="form-group">
+      <button type="button" class="btn btn-primary" ng-click="eccomi()">Ciao</button>
+      {{ciao}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group">
+      <button type="button" class="btn btn-primary" ng-click="welcome()">Welcome</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group">
+      <button type="button" class="btn btn-primary" ng-click="getFoto()">Foto</button>
+      <div ng-show="immagine.src !== null">
+            <img ng-src="{{immagine.src}}" height="150" width="150"/>
+      </div>
+      <div>
+        <p>Errore: {{immagine.isError}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group">
+      <button type="button" class="btn btn-primary" ng-click="richiesta()">Richiesta</button>
+
+      <pre>
+        {{comuni | json}}
+      </pre>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group">
+      <button type="button" class="btn btn-primary" ng-click="nextPage()">Pagina 2</button>
+    </div>
+  </div>
+</div>

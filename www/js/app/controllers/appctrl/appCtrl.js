@@ -47,4 +47,9 @@ angular.module('myApp').controller('appCtrl',['$scope', '$location', '$http', fu
   	  $scope.comuni = null;
     });
   }
+
+  $scope.nextPage = function() {
+    //cambio pagina
+		$location.path("/second");
+  }
 }]);
